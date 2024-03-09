@@ -7,13 +7,13 @@ Provides methods for importing and export `XMind` files.
 ## Import
 
 ```js
-import xmind from 'simple-mind-map/src/parse/xmind.js'
+import xmind from 'simple-mind/src/parse/xmind.js'
 ```
 
 If you are using the file in the format of `umd`, you can obtain it in the following way:
 
 ```html
-<script src="simple-mind-map/dist/simpleMindMap.umd.min.js"></script>
+<script src="simple-mind/dist/simpleMindMap.umd.min.js"></script>
 ```
 
 ```js
@@ -56,7 +56,7 @@ package
 
 > v0.6.6+
 
-- `data`: `simple-mind-map` data, you can get it by `mindMap.getData()` method.
+- `data`: `simple-mind` data, you can get it by `mindMap.getData()` method.
 
 - `name`: The file name to export.
 

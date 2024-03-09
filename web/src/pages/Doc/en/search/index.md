@@ -7,8 +7,8 @@ This plugin provides the ability to search and replace node content.
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Search from 'simple-mind-map/src/plugins/Search.js'
+import MindMap from 'simple-mind'
+import Search from 'simple-mind/src/plugins/Search.js'
 MindMap.usePlugin(Search)
 ```
 

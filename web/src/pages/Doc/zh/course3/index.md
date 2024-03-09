@@ -19,7 +19,7 @@ mindMap.execCommand('INSERT_CHILD_NODE')
 1.需要指定新插入节点的`id`，比如：
 
 ```js
-import { createUid } from 'simple-mind-map/src/utils'
+import { createUid } from 'simple-mind/src/utils'
 
 let uid = createUid()
 mindMap.execCommand('INSERT_CHILD_NODE', false, [], {

@@ -1,34 +1,52 @@
 <template>
   <div>
     <h1>如何渲染一个大纲</h1>
-<p>思维导图本质就是一颗树，所以你可以使用树组件来完成大纲的显示。</p>
-<p>可以监听<code>data_change</code>事件来获取当前最新的思维导图数据：</p>
-<pre class="hljs"><code>mindMap.on(<span class="hljs-string">&#x27;data_change&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+    <p>思维导图本质就是一颗树，所以你可以使用树组件来完成大纲的显示。</p>
+    <p>可以监听<code>data_change</code>事件来获取当前最新的思维导图数据：</p>
+    <pre
+      class="hljs"
+    ><code>mindMap.on(<span class="hljs-string">&#x27;data_change&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
     <span class="hljs-comment">// data数据是不带节点对象的纯数据</span>
     <span class="hljs-comment">// 如果你需要操作节点对象，可以使用mindMap.renderer.renderTree</span>
     <span class="hljs-built_in">console</span>.log(data, mindMap.renderer.renderTree)
 })
 </code></pre>
-<p>通常点击了大纲的某个节点，会将画布定位到该节点并激活该节点，这可以这么做：</p>
-<pre class="hljs"><code><span class="hljs-keyword">const</span> node = data._node
+    <p>
+      通常点击了大纲的某个节点，会将画布定位到该节点并激活该节点，这可以这么做：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">const</span> node = data._node
 mindMap.renderer.moveNodeToCenter(node)
 node.active()
 
 <span class="hljs-comment">// 在v0.6.7+版本可以这么做：</span>
 mindMap.execCommand(<span class="hljs-string">&#x27;GO_TARGET_NODE&#x27;</span>, node)<span class="hljs-comment">// 或者传节点的uid</span>
 </code></pre>
-<p>当在大纲树上编辑了某个节点的内容，需要同步到思维导图树上：</p>
-<pre class="hljs"><code>data._node.setText(<span class="hljs-string">&#x27;xxx&#x27;</span>)
+    <p>当在大纲树上编辑了某个节点的内容，需要同步到思维导图树上：</p>
+    <pre
+      class="hljs"
+    ><code>data._node.setText(<span class="hljs-string">&#x27;xxx&#x27;</span>)
 </code></pre>
-<p>要插入兄弟节点或子节点可以这么操作：</p>
-<pre class="hljs"><code>mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_NODE&#x27;</span>, <span class="hljs-literal">false</span>)
+    <p>要插入兄弟节点或子节点可以这么操作：</p>
+    <pre
+      class="hljs"
+    ><code>mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_NODE&#x27;</span>, <span class="hljs-literal">false</span>)
 mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</span>, <span class="hljs-literal">false</span>)
 </code></pre>
-<h2>进阶</h2>
-<p>要实现一个功能完善的大纲并不容易，下面介绍一下包含定位、编辑、拖拽、删除、单独编辑功能的大纲实现。</p>
-<p>以<a href="https://element.eleme.cn/#/zh-CN/component/tree">ElementUI Tree组件</a>为例。</p>
-<p>实现监听<code>data_change</code>事件来刷新树数据：</p>
-<pre class="hljs"><code><span class="hljs-keyword">import</span> { nodeRichTextToTextWithWrap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind-map/src/utils&#x27;</span>
+    <h2>进阶</h2>
+    <p>
+      要实现一个功能完善的大纲并不容易，下面介绍一下包含定位、编辑、拖拽、删除、单独编辑功能的大纲实现。
+    </p>
+    <p>
+      以<a href="https://element.eleme.cn/#/zh-CN/component/tree"
+        >ElementUI Tree组件</a
+      >为例。
+    </p>
+    <p>实现监听<code>data_change</code>事件来刷新树数据：</p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">import</span> { nodeRichTextToTextWithWrap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind/src/utils&#x27;</span>
 
 <span class="hljs-built_in">this</span>.mindMap.on(<span class="hljs-string">&#x27;data_change&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
     <span class="hljs-built_in">this</span>.refresh()
@@ -59,8 +77,10 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     }
 }
 </code></pre>
-<p>模板如下：</p>
-<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">el-tree</span>
+    <p>模板如下：</p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-tag">&lt;<span class="hljs-name">el-tree</span>
     <span class="hljs-attr">ref</span>=<span class="hljs-string">&quot;tree&quot;</span>
     <span class="hljs-attr">node-key</span>=<span class="hljs-string">&quot;uid&quot;</span>
     <span class="hljs-attr">draggable</span>
@@ -93,9 +113,13 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">el-tree</span>&gt;</span>
 </code></pre>
-<h3>定位节点</h3>
-<p>给节点绑定了一个<code>click</code>事件用于在画布内定位点击的节点，可以调用思维导图的相关方法实现：</p>
-<pre class="hljs"><code><span class="hljs-comment">// 激活当前节点且移动当前节点到画布中间</span>
+    <h3>定位节点</h3>
+    <p>
+      给节点绑定了一个<code>click</code>事件用于在画布内定位点击的节点，可以调用思维导图的相关方法实现：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-comment">// 激活当前节点且移动当前节点到画布中间</span>
 <span class="hljs-function"><span class="hljs-title">onClick</span>(<span class="hljs-params">data</span>)</span> {
     <span class="hljs-comment">// 根据uid知道思维导图节点对象</span>
     <span class="hljs-keyword">const</span> targetNode = <span class="hljs-built_in">this</span>.mindMap.renderer.findNodeByUid(data.uid)
@@ -110,9 +134,13 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     })
 }
 </code></pre>
-<h3>编辑</h3>
-<p>我们通过自定义树节点内容渲染了一个<code>contenteditable=true</code>的标签用于输入文本，然后在<code>blur</code>事件中修改节点文本：</p>
-<pre class="hljs"><code><span class="hljs-keyword">import</span> { textToNodeRichTextWithWrap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind-map/src/utils&#x27;</span>
+    <h3>编辑</h3>
+    <p>
+      我们通过自定义树节点内容渲染了一个<code>contenteditable=true</code>的标签用于输入文本，然后在<code>blur</code>事件中修改节点文本：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">import</span> { textToNodeRichTextWithWrap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind/src/utils&#x27;</span>
 
 <span class="hljs-comment">// 失去焦点更新节点文本</span>
 <span class="hljs-function"><span class="hljs-title">onBlur</span>(<span class="hljs-params">e, node</span>)</span> {
@@ -135,15 +163,19 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     }
 }
 </code></pre>
-<h3>拖拽</h3>
-<p>设置了<code>draggable</code>属性即可开启拖拽，首先根节点是不允许拖拽的，所以通过<code>allow-drag</code>属性传入一个判断方法：</p>
-<pre class="hljs"><code><span class="hljs-comment">// 根节点不允许拖拽</span>
+    <h3>拖拽</h3>
+    <p>
+      设置了<code>draggable</code>属性即可开启拖拽，首先根节点是不允许拖拽的，所以通过<code>allow-drag</code>属性传入一个判断方法：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-comment">// 根节点不允许拖拽</span>
 <span class="hljs-function"><span class="hljs-title">checkAllowDrag</span>(<span class="hljs-params">node</span>)</span> {
     <span class="hljs-keyword">return</span> !node.data.root
 }
 </code></pre>
-<p>然后监听拖拽完成事件<code>node-drop</code>来实现画布内节点的调整：</p>
-<pre class="hljs"><code><span class="hljs-comment">// 拖拽结束事件</span>
+    <p>然后监听拖拽完成事件<code>node-drop</code>来实现画布内节点的调整：</p>
+    <pre class="hljs"><code><span class="hljs-comment">// 拖拽结束事件</span>
 <span class="hljs-function"><span class="hljs-title">onNodeDrop</span>(<span class="hljs-params">data, target, position</span>)</span> {
     <span class="hljs-comment">// 被拖拽的节点</span>
     <span class="hljs-keyword">const</span> node = <span class="hljs-built_in">this</span>.mindMap.renderer.findNodeByUid(data.data.uid)
@@ -168,15 +200,21 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     }
 }
 </code></pre>
-<h3>删除节点</h3>
-<p>首先通过树组件的<code>current-change</code>事件来保存当前高亮的树节点：</p>
-<pre class="hljs"><code><span class="hljs-comment">// 当前选中的树节点变化事件</span>
+    <h3>删除节点</h3>
+    <p>
+      首先通过树组件的<code>current-change</code>事件来保存当前高亮的树节点：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-comment">// 当前选中的树节点变化事件</span>
 <span class="hljs-function"><span class="hljs-title">onCurrentChange</span>(<span class="hljs-params">data</span>)</span> {
     <span class="hljs-built_in">this</span>.currentData = data
 }
 </code></pre>
-<p>然后通过监听<code>keydown</code>事件来完成删除节点的操作：</p>
-<pre class="hljs"><code><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;keydown&#x27;</span>, <span class="hljs-built_in">this</span>.onKeyDown)
+    <p>然后通过监听<code>keydown</code>事件来完成删除节点的操作：</p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;keydown&#x27;</span>, <span class="hljs-built_in">this</span>.onKeyDown)
 
 <span class="hljs-comment">// 删除节点</span>
 <span class="hljs-function"><span class="hljs-title">onKeyDown</span>(<span class="hljs-params">e</span>)</span> {
@@ -194,9 +232,13 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     }
 }
 </code></pre>
-<h3>创建新节点</h3>
-<p>通过监听节点内容编辑框的<code>keydown</code>事件来完成添加新节点的操作：</p>
-<pre class="hljs"><code><span class="hljs-keyword">import</span> { createUid } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind-map/src/utils&#x27;</span>
+    <h3>创建新节点</h3>
+    <p>
+      通过监听节点内容编辑框的<code>keydown</code>事件来完成添加新节点的操作：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">import</span> { createUid } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind/src/utils&#x27;</span>
 
 <span class="hljs-comment">// 节点输入区域按键事件</span>
 <span class="hljs-function"><span class="hljs-title">onNodeInputKeydown</span>(<span class="hljs-params">e</span>)</span> {
@@ -226,9 +268,13 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     })
 }
 </code></pre>
-<h3>拦截输入框的粘贴操作</h3>
-<p>为什么要拦截输入框的粘贴操作，因为用户可能粘贴的是富文本内容，也就是带html标签的，但是一般我们都不希望用户粘贴这种内容，只允许粘贴纯文本，所以我们要拦截粘贴事件，处理一下用户粘贴的内容：</p>
-<pre class="hljs"><code><span class="hljs-keyword">import</span> { getTextFromHtml } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind-map/src/utils&#x27;</span>
+    <h3>拦截输入框的粘贴操作</h3>
+    <p>
+      为什么要拦截输入框的粘贴操作，因为用户可能粘贴的是富文本内容，也就是带html标签的，但是一般我们都不希望用户粘贴这种内容，只允许粘贴纯文本，所以我们要拦截粘贴事件，处理一下用户粘贴的内容：
+    </p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">import</span> { getTextFromHtml } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind/src/utils&#x27;</span>
 
 <span class="hljs-comment">// 拦截粘贴事件</span>
 <span class="hljs-function"><span class="hljs-title">onPaste</span>(<span class="hljs-params">e</span>)</span> {
@@ -248,17 +294,18 @@ mindMap.execCommand(<span class="hljs-string">&#x27;INSERT_CHILD_NODE&#x27;</spa
     selection.collapseToEnd()
 }
 </code></pre>
-<p>到这里基本功能就都完成了，是不是觉得挺简单的？核心原理和操作确实很简单，麻烦的是各种情况和冲突的处理，比如焦点的冲突、快捷键的冲突、操作的时间顺序等等，所以务必先阅读一下完整的源码<a href="https://github.com/wanglin2/mind-map/blob/main/web/src/pages/Edit/components/Outline.vue">Outline.vue</a>。</p>
-
+    <p>
+      到这里基本功能就都完成了，是不是觉得挺简单的？核心原理和操作确实很简单，麻烦的是各种情况和冲突的处理，比如焦点的冲突、快捷键的冲突、操作的时间顺序等等，所以务必先阅读一下完整的源码<a
+        href="https://github.com/wanglin2/mind-map/blob/main/web/src/pages/Edit/components/Outline.vue"
+        >Outline.vue</a
+      >。
+    </p>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
-
 </style>

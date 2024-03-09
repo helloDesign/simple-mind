@@ -21,13 +21,13 @@
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 ```
 
 2. 修改`web/src/pages/Edit/components/Edit.vue`文件
@@ -56,11 +56,11 @@ npm run serve
 4. 启动信令服务器：
 
 ```bash
-// simple-mind-map路径下执行
+// simple-mind路径下执行
 npm run wsServe
 ```
 
-该命令执行的是`simple-mind-map/bin/wsServer.mjs`文件，该文件的内容是从[y-webrtc](https://github.com/yjs/y-webrtc)仓库直接复制的，可能并不完善，请谨慎用于实际项目。
+该命令执行的是`simple-mind/bin/wsServer.mjs`文件，该文件的内容是从[y-webrtc](https://github.com/yjs/y-webrtc)仓库直接复制的，可能并不完善，请谨慎用于实际项目。
 
 5. 在两个浏览器中访问服务地址：
 
@@ -73,8 +73,8 @@ http://【你的ip】:8080/#/?userName=用户名
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import Cooperate from 'simple-mind-map/src/plugins/Cooperate.js'
+import MindMap from 'simple-mind'
+import Cooperate from 'simple-mind/src/plugins/Cooperate.js'
 MindMap.usePlugin(Cooperate)
 ```
 
@@ -106,7 +106,7 @@ MindMap.usePlugin(Cooperate)
 
 如果使用默认的`y-webrtc`，那么需要通过第二个参数传入必要的配置。
 
-`simple-mind-map/bin/wsServer.mjs`文件提供了一个简单的信令服务器代码，可供测试和参考。
+`simple-mind/bin/wsServer.mjs`文件提供了一个简单的信令服务器代码，可供测试和参考。
 
 ### setUserInfo(userInfo)
 

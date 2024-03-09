@@ -44,7 +44,7 @@ import {
   createUid,
   htmlEscape,
   handleInputPasteText
-} from 'simple-mind-map/src/utils'
+} from 'simple-mind/src/utils'
 
 // 大纲树
 export default {

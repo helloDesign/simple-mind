@@ -10,7 +10,7 @@
     <ImgUpload
       ref="ImgUpload"
       v-model="img"
-      style="margin-bottom: 12px;"
+      style="margin-bottom: 12px"
     ></ImgUpload>
     <div class="title">方式二</div>
     <div class="inputBox">
@@ -38,7 +38,7 @@
 
 <script>
 import ImgUpload from '@/components/ImgUpload'
-import { getImageSize, isMobile } from 'simple-mind-map/src/utils/index'
+import { getImageSize, isMobile } from 'simple-mind/src/utils/index'
 
 /**
  * @Author: 王林

@@ -2,7 +2,7 @@
 
 > 要使用水印需要注册水印插件
 
-`simple-mind-map`提供了水印的插件，使用非常简单，首先可以在实例化`simple-mind-map`时提供水印的选项配置来直接显示水印：
+`simple-mind`提供了水印的插件，使用非常简单，首先可以在实例化`simple-mind`时提供水印的选项配置来直接显示水印：
 
 ```js
 new MindMap({

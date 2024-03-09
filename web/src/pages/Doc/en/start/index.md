@@ -5,7 +5,7 @@
 > Things to note before version 0.2.0:
 
 ```bash
-npm i simple-mind-map
+npm i simple-mind
 ```
 
 `0.2.0` Notes for previous versions:
@@ -17,7 +17,7 @@ npm i simple-mind-map
 >
 > ```js
 > module.exports = {
->   transpileDependencies: ["simple-mind-map"],
+>   transpileDependencies: ["simple-mind"],
 > };
 > ```
 >
@@ -46,10 +46,10 @@ Also, set the `CSS` style again:
 }
 ```
 
-Then introduce the `simple-mind-map` library and create an instance:
+Then introduce the `simple-mind` library and create an instance:
 
 ```js
-import MindMap from "simple-mind-map";
+import MindMap from "simple-mind";
 
 const mindMap = new MindMap({
   el: document.getElementById('mindMapContainer'),
@@ -64,21 +64,21 @@ const mindMap = new MindMap({
 
 This will result in a mind map.
 
-If you want to implement a complete mind map, you usually need to develop some UI interfaces to achieve more functions through the interfaces provided by the `simple-mind-map` library.
+If you want to implement a complete mind map, you usually need to develop some UI interfaces to achieve more functions through the interfaces provided by the `simple-mind` library.
 
-`simple-mind-map` supports rich configurations, events, commands, and some additional plugin extensions. Read the subsequent documentation to learn more.
+`simple-mind` supports rich configurations, events, commands, and some additional plugin extensions. Read the subsequent documentation to learn more.
 
 The non-packaged 'ES' module is introduced by default, and only contains core functions, not unregistered plugin content, which can effectively reduce the size. However, you need to configure the `babel` compilation `simple mind-map` in your project to prevent some newer `js` syntax some browsers not supporting it.
 
 If you don't want to load all plugins from the beginning and want to load and register plugins asynchronously after instantiation, you can do this:
 
 ```js
-import('simple-mind-map/src/plugins/Export.js').then(res => {
+import('simple-mind/src/plugins/Export.js').then(res => {
   mindMap.addPlugin(res.default)
 })
 ```
 
-If you need a file in the format of `umd` module, such as `CDN` in the browser, Then you can find the `simpleMindMap.umd.min.js` file and `simpleMindMap.css` file in the `/simple-mind-map/dist/` directory, copy it to your project, and then import it into the page:
+If you need a file in the format of `umd` module, such as `CDN` in the browser, Then you can find the `simpleMindMap.umd.min.js` file and `simpleMindMap.css` file in the `/simple-mind/dist/` directory, copy it to your project, and then import it into the page:
 
 ```html
 <link rel="stylesheet" href="simpleMindMap.css">
@@ -89,12 +89,12 @@ A global variable `window.simpleMindMap` will be created. you can get `MindMap` 
 
 The disadvantage of this method is that it will contain all the content, including the plugins you have not registered, so the overall volume will be relatively large.
 
-（v0.5.4+）If you want to use the `ES` module directly on the browser side, you can find the `simpleMindMap.esm.js` and `simpleMindMap.esm.css` files in the `/simple-mind-map/dist/` directory.
+（v0.5.4+）If you want to use the `ES` module directly on the browser side, you can find the `simpleMindMap.esm.js` and `simpleMindMap.esm.css` files in the `/simple-mind/dist/` directory.
 
 Online CDN services can also be used, such as:
 
 ```
-https://unpkg.com/browse/simple-mind-map@0.9.2/dist/
+https://unpkg.com/browse/simple-mind@0.9.2/dist/
 ```
 
 You can find all the packaged files for a certain version.
@@ -108,13 +108,13 @@ If you only use library, you don't need to read this section.
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 npm run serve
 ```
 
@@ -123,16 +123,16 @@ npm run serve
 ### Packaging the Library
 
 Since version `0.2.0`, we have added support for packaging the core library
-simple-mind-map. This uses the same packaging tool as the sample project web.
+simple-mind. This uses the same packaging tool as the sample project web.
 
 ```bash
 cd web
 npm run buildLibrary
 ```
 
-The packaging entry is `simple-mind-map/full.js`, which will introduce all plugins by default. If you don't need all plugins, you can modify the file to only introduce the plugins you need, which can reduce the size of the packaged file.
+The packaging entry is `simple-mind/full.js`, which will introduce all plugins by default. If you don't need all plugins, you can modify the file to only introduce the plugins you need, which can reduce the size of the packaged file.
 
-The `package.json` file in the `simple-mind-map` library provides two export
+The `package.json` file in the `simple-mind` library provides two export
 fields:
 
 ```json
@@ -149,11 +149,11 @@ point.
 #### Generate TypeScript type files
 
 ```bash
-cd simple-mind-map
+cd simple-mind
 npm run types
 ```
 
-You can obtain the type files in the 'simple-mind-map/types/' directory.
+You can obtain the type files in the 'simple-mind/types/' directory.
 
 ### Compile the doc
 
@@ -178,10 +178,10 @@ The `index.html` file will be automatically moved to the root directory.
 Solution: use the following import method:
 
 ```js
-import MindMap from "simple-mind-map/dist/simpleMindMap.umd.min";
+import MindMap from "simple-mind/dist/simpleMindMap.umd.min";
 ```
 
-The `simple-mind-map` package provides the unpacked entry field `module`, and
+The `simple-mind` package provides the unpacked entry field `module`, and
 the `xml-js` package dependency needs to import the package in the `node`
 environment. Therefore, it cannot be obtained in `Vite` and an error will be
 reported. Therefore, specify the import of the packed entry, and all relevant

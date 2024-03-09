@@ -410,7 +410,7 @@ class Render {
   }
 
   //   渲染
-  render(callback = () => {}, source) {
+  render(callback = () => { }, source) {
     // 切换主题时，被收起的节点需要添加样式复位的标注
     if (source === CONSTANTS.CHANGE_THEME) {
       this.resetUnExpandNodeStyle()
@@ -1027,7 +1027,7 @@ class Render {
     if (this.currentBeingPasteType === CONSTANTS.PASTE_TYPE.CLIP_BOARD) {
       // 存在文本，则创建子节点
       if (text) {
-        // 判断粘贴的是否是simple-mind-map的数据
+        // 判断粘贴的是否是simple-mind的数据
         let smmData = null
         let useDefault = true
         // 用户自定义处理
@@ -1410,7 +1410,7 @@ class Render {
     this.setNodeDataRender(node, data)
     // 更新了连线的样式
     if (lineStyleProps.includes(prop)) {
-      ;(node.parent || node).renderLine(true)
+      ; (node.parent || node).renderLine(true)
     }
   }
 
@@ -1431,7 +1431,7 @@ class Render {
       }
     })
     if (hasLineStyleProps) {
-      ;(node.parent || node).renderLine(true)
+      ; (node.parent || node).renderLine(true)
     }
   }
 
@@ -1701,7 +1701,7 @@ class Render {
   }
 
   // 定位到指定节点
-  goTargetNode(node, callback = () => {}) {
+  goTargetNode(node, callback = () => { }) {
     let uid = typeof node === 'string' ? node : node.getData('uid')
     if (!uid) return
     this.expandToNodeUid(uid, () => {
@@ -1760,7 +1760,7 @@ class Render {
   }
 
   // 展开到指定uid的节点
-  expandToNodeUid(uid, callback = () => {}) {
+  expandToNodeUid(uid, callback = () => { }) {
     let parentsList = []
     const cache = {}
     bfsWalk(this.renderTree, (node, parent) => {

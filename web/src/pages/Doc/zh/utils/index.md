@@ -5,7 +5,7 @@
 引用：
 
 ```js
-import {walk, ...} from 'simple-mind-map/src/utils'
+import {walk, ...} from 'simple-mind/src/utils'
 ```
 
 ### 方法
@@ -489,7 +489,7 @@ copyNodeTree({}, node)
 引入：
 
 ```js
-import drawBackgroundImageToCanvas from 'simple-mind-map/src/utils/simulateCSSBackgroundInCanvas'
+import drawBackgroundImageToCanvas from 'simple-mind/src/utils/simulateCSSBackgroundInCanvas'
 ```
 
 使用：
@@ -528,7 +528,7 @@ drawBackgroundImageToCanvas(
 引入：
 
 ```js
-import Lru from 'simple-mind-map/src/utils/Lru.js'
+import Lru from 'simple-mind/src/utils/Lru.js'
 ```
 
 ### 构造函数

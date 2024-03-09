@@ -1,6 +1,6 @@
 # 快捷键
 
-`simple-mind-map`常用操作都支持快捷键方式使用，目前所有的快捷键列表如下：
+`simple-mind`常用操作都支持快捷键方式使用，目前所有的快捷键列表如下：
 
 ```js
 [
@@ -113,7 +113,7 @@
 ]
 ```
 
-默认当鼠标滑入画布范围内才会响应快捷键操作，如果你想去掉这个限制可以在实例化`simple-mind-map`时通过选项指定：
+默认当鼠标滑入画布范围内才会响应快捷键操作，如果你想去掉这个限制可以在实例化`simple-mind`时通过选项指定：
 
 ```js
 new MindMap({
@@ -141,7 +141,7 @@ Shift + a       // 与
 要获取所有的按键值对应的名称，可以：
 
 ```js
-import { keyMap } from 'simple-mind-map/src/utils/keyMap'
+import { keyMap } from 'simple-mind/src/utils/keyMap'
 ```
 
 可以添加当然也可以移除，详细文档可以参考[keyCommand](https://wanglin2.github.io/mind-map/#/doc/zh/keyCommand)。

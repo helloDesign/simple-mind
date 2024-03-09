@@ -9,8 +9,8 @@ This plugin is used to help develop the functionality of horizontal and vertical
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Scrollbar from 'simple-mind-map/src/plugins/Scrollbar.js'
+import MindMap from 'simple-mind'
+import Scrollbar from 'simple-mind/src/plugins/Scrollbar.js'
 MindMap.usePlugin(Scrollbar)
 ```
 

@@ -8,7 +8,7 @@
     element-loading-spinner="el-icon-loading"
     element-loading-background="rgba(0, 0, 0, 0.8)"
     :width="isMobile ? '90%' : '50%'"
-    :top="isMobile? '20px' : '15vh'"
+    :top="isMobile ? '20px' : '15vh'"
   >
     <div class="exportContainer" :class="{ isDark: isDark }">
       <div class="nameInputBox">
@@ -87,7 +87,7 @@
 <script>
 import { mapState } from 'vuex'
 import { downTypeList } from '@/config'
-import { isMobile } from 'simple-mind-map/src/utils/index'
+import { isMobile } from 'simple-mind/src/utils/index'
 
 /**
  * @Author: 王林

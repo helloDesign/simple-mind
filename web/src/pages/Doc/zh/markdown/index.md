@@ -7,13 +7,13 @@
 ## 引入
 
 ```js
-import markdown from 'simple-mind-map/src/parse/markdown.js'
+import markdown from 'simple-mind/src/parse/markdown.js'
 ```
 
 如果使用的是`umd`格式的文件，那么可以通过如下方式获取：
 
 ```html
-<script src="simple-mind-map/dist/simpleMindMap.umd.min.js"></script>
+<script src="simple-mind/dist/simpleMindMap.umd.min.js"></script>
 ```
 
 ```js

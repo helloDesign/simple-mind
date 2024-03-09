@@ -23,9 +23,9 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import RichText from 'simple-mind-map/src/plugins/RichText.js'
-// import RichText from 'simple-mind-map/src/RichText.js' v0.6.0以下版本使用该路径
+import MindMap from 'simple-mind'
+import RichText from 'simple-mind/src/plugins/RichText.js'
+// import RichText from 'simple-mind/src/RichText.js' v0.6.0以下版本使用该路径
 
 MindMap.usePlugin(RichText, opt?)
 ```

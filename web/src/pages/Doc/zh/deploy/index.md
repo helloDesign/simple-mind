@@ -1,6 +1,6 @@
 # 部署
 
-本项目的`web`目录下提供了一个基于`simple-mind-map`库、`Vue2.x`、`ElementUI`开发的完整项目，数据默认存储在电脑本地，此外可以操作电脑本地文件，原意是作为一个线上`demo`，但是也完全可以直接把它当做一个在线版思维导图应用使用，在线地址：[https://wanglin2.github.io/mind-map/](https://wanglin2.github.io/mind-map/)。
+本项目的`web`目录下提供了一个基于`simple-mind`库、`Vue2.x`、`ElementUI`开发的完整项目，数据默认存储在电脑本地，此外可以操作电脑本地文件，原意是作为一个线上`demo`，但是也完全可以直接把它当做一个在线版思维导图应用使用，在线地址：[https://wanglin2.github.io/mind-map/](https://wanglin2.github.io/mind-map/)。
 
 如果你的网络环境访问`GitHub`服务很慢，你也可以部署到你的服务器上。
 
@@ -11,13 +11,13 @@
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 ```
 
 然后你可以选择启动本地服务：

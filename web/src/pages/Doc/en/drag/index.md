@@ -11,9 +11,9 @@ Please refer to the [Instantiation Options](/mind-map/#/doc/zh/constructor) of t
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Drag from 'simple-mind-map/src/plugins/Drag.js'
-// import Drag from 'simple-mind-map/src/Drag.js' Use this path for versions below v0.6.0
+import MindMap from 'simple-mind'
+import Drag from 'simple-mind/src/plugins/Drag.js'
+// import Drag from 'simple-mind/src/Drag.js' Use this path for versions below v0.6.0
 
 MindMap.usePlugin(Drag)
 ```

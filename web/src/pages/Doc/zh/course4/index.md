@@ -194,7 +194,7 @@ activeNodes.value.forEach(node => {
 激活样式只支持设置边框相关样式和背景。可以通过如下方式获取支持的属性：
 
 ```js
-import { supportActiveStyle } from 'simple-mind-map/src/themes/default'
+import { supportActiveStyle } from 'simple-mind/src/themes/default'
 
 const checkIsSupportActive = (prop) => {
     return supportActiveStyle.includes(prop)

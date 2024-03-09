@@ -7,9 +7,9 @@
 如果也你需要动态切换是否开启富文本编辑的功能可以参考如下代码：
 
 ```js
-import MindMap from 'simple-mind-map'
-import RichText from 'simple-mind-map/src/plugins/RichText.js'
-// import RichText from 'simple-mind-map/src/RichText.js' v0.6.0以下版本使用该路径
+import MindMap from 'simple-mind'
+import RichText from 'simple-mind/src/plugins/RichText.js'
+// import RichText from 'simple-mind/src/RichText.js' v0.6.0以下版本使用该路径
 
 // 动态开启富文本编辑
 mindMap.addPlugin(RichText)

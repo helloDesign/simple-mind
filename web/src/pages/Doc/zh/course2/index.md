@@ -106,7 +106,7 @@ activeNodes.value.forEach(node => {
 
 ### 自定义显示备注
 
-如果你想显示更丰富的备注内容，比如支持`markdown`，那么你可以在实例化`simple-mind-map`时插入`customNoteContentShow`选项。
+如果你想显示更丰富的备注内容，比如支持`markdown`，那么你可以在实例化`simple-mind`时插入`customNoteContentShow`选项。
 
 设置备注内容还是使用`setNote`方法，只不过现在插入的是`markdown`字符串，因为内置的备注弹窗只能处理纯文本内容，所以你需要自己来渲染`markdown`：
 

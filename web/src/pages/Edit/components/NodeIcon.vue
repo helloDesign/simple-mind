@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { nodeIconList } from 'simple-mind-map/src/svg/icons'
+import { nodeIconList } from 'simple-mind/src/svg/icons'
 import icon from '@/config/icon'
 
 /**

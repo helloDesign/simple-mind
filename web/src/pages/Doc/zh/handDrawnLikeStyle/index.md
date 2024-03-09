@@ -33,7 +33,7 @@ HandDrawnLikeStyle 是第一个收费插件，功能是提供手绘风格的样�
 1.引用打包后的文件：
 
 ```js
-import MindMap from 'simple-mind-map'
+import MindMap from 'simple-mind'
 import HandDrawnLikeStyle from 'handDrawnLikeStyle.cjs.min.js'
 // 或 import HandDrawnLikeStyle from 'handDrawnLikeStyle.esm.min.js'
 
@@ -51,14 +51,14 @@ npm link
 然后进入到你的项目根目录执行：
 
 ```bash
-npm link simple-mind-map-plugin-handdrawnlikestyle
+npm link simple-mind-plugin-handdrawnlikestyle
 ```
 
 然后就可以直接导入进行使用：
 
 ```js
-import MindMap from 'simple-mind-map'
-import HandDrawnLikeStyle from 'simple-mind-map-plugin-handdrawnlikestyle'
+import MindMap from 'simple-mind'
+import HandDrawnLikeStyle from 'simple-mind-plugin-handdrawnlikestyle'
 
 MindMap.usePlugin(HandDrawnLikeStyle)
 ```

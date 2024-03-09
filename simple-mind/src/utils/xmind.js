@@ -188,8 +188,8 @@ const formatGetGeneralization = data => {
   return Array.isArray(generalization)
     ? generalization
     : generalization
-    ? [generalization]
-    : []
+      ? [generalization]
+      : []
 }
 
 //  获取节点自身的概要，非子节点区间
@@ -231,20 +231,20 @@ export const parseNodeGeneralizationToXmind = node => {
     })
   }
   // 在xmind中，概要都是保存在父节点的
-  // 而在simple-mind-map中，区间概要保存在父节点中，不带区间的保存在自身
+  // 而在simple-mind中，区间概要保存在父节点中，不带区间的保存在自身
   // 所以先要过滤出自身的区间概要
   const generalizationList = getRangeGeneralization(node.data)
   generalizationList.forEach(item => {
     collectSummary(item, item.range[0], item.range[1])
   })
 
-  // 遍历子节点，找出子节点自身的概要
-  ;(node.children || []).forEach((child, childIndex) => {
-    const list = getSelfGeneralization(child.data)
-    list.forEach(item => {
-      collectSummary(item, childIndex, childIndex)
+    // 遍历子节点，找出子节点自身的概要
+    ; (node.children || []).forEach((child, childIndex) => {
+      const list = getSelfGeneralization(child.data)
+      list.forEach(item => {
+        collectSummary(item, childIndex, childIndex)
+      })
     })
-  })
 
   return {
     summary,

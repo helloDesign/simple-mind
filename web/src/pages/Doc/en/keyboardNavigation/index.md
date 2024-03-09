@@ -7,9 +7,9 @@
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import KeyboardNavigation from 'simple-mind-map/src/plugins/KeyboardNavigation.js'
-// import KeyboardNavigation from 'simple-mind-map/src/KeyboardNavigation.js' Use this path for versions below v0.6.0
+import MindMap from 'simple-mind'
+import KeyboardNavigation from 'simple-mind/src/plugins/KeyboardNavigation.js'
+// import KeyboardNavigation from 'simple-mind/src/KeyboardNavigation.js' Use this path for versions below v0.6.0
 
 MindMap.usePlugin(KeyboardNavigation)
 ```

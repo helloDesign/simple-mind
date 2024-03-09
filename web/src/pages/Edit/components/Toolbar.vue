@@ -49,7 +49,7 @@
         <div
           class="toolbarBtn"
           @click="$bus.$emit('showExport')"
-          style="margin-right: 0;"
+          style="margin-right: 0"
         >
           <span class="icon iconfont iconexport"></span>
           <span class="text">{{ $t('toolbar.export') }}</span>
@@ -138,10 +138,10 @@ import Export from './Export'
 import Import from './Import'
 import { mapState } from 'vuex'
 import { Notification } from 'element-ui'
-import exampleData from 'simple-mind-map/example/exampleData'
+import exampleData from 'simple-mind/example/exampleData'
 import { getData } from '../../../api'
 import ToolbarNodeBtnList from './ToolbarNodeBtnList.vue'
-import { throttle } from 'simple-mind-map/src/utils/index'
+import { throttle } from 'simple-mind/src/utils/index'
 
 /**
  * @Author: 王林

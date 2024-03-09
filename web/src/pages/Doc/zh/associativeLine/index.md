@@ -11,9 +11,9 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import AssociativeLine from 'simple-mind-map/src/plugins/AssociativeLine.js'
-// import AssociativeLine from 'simple-mind-map/src/AssociativeLine.js' v0.6.0以下版本使用该路径
+import MindMap from 'simple-mind'
+import AssociativeLine from 'simple-mind/src/plugins/AssociativeLine.js'
+// import AssociativeLine from 'simple-mind/src/AssociativeLine.js' v0.6.0以下版本使用该路径
 
 MindMap.usePlugin(AssociativeLine)
 ```

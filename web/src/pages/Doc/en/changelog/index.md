@@ -803,7 +803,7 @@ Fix: 1.Fixed the issue of destroying mind maps without setting a background styl
 
 ## 0.6.0
 
-Breaking change: Adjusted the directory structure of the simple-mind-map source code, Main impact: 1. The introduction path of the plugin needs to be modified. The constant file path needs to be modified.
+Breaking change: Adjusted the directory structure of the simple-mind source code, Main impact: 1. The introduction path of the plugin needs to be modified. The constant file path needs to be modified.
 
 New: 1.Supports one click zoom to fit the canvas function. 2.Press and hold the Ctrl key to activate the multi selection function on demand through configuration. 3.Support setting to left click to select multiple nodes and right click to drag the canvas. 4. Support controlling whether nodes are allowed to be edited. 5.Add a method for destroying mind maps. 6.Added touch event support plugin.
 
@@ -1009,7 +1009,7 @@ New: Support register new theme.
 
 ## 0.2.22
 
-optimization：The theme and structure pictures of the built-in `simple-mind-map` package are removed and replaced by user self-maintenance. The original pictures can be found in the `web/assets/img/` directory.
+optimization：The theme and structure pictures of the built-in `simple-mind` package are removed and replaced by user self-maintenance. The original pictures can be found in the `web/assets/img/` directory.
 
 ## 0.2.21
 

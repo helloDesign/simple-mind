@@ -1,4 +1,4 @@
-import { imgToDataUrl } from 'simple-mind-map/src/utils/index'
+import { imgToDataUrl } from 'simple-mind/src/utils/index'
 
 // 处理知犀
 const handleZHIXI = async data => {
@@ -78,7 +78,7 @@ const handleClipboardText = async text => {
       const res = await handleZHIXI(parsedData.children)
       return res
     }
-  } catch (error) {}
+  } catch (error) { }
   // 知犀数据格式2
   if (text.includes('￿﻿')) {
     const res = await handleZHIXI(text)

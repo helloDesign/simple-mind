@@ -11,13 +11,13 @@ The project itself does not rely on the backend, so it can be deployed to a stat
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 ```
 
 Then you can choose to start the local service:

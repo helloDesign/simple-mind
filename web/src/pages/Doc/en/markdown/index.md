@@ -7,13 +7,13 @@ Provides methods for importing and exporting `Markdown` files.
 ## Import
 
 ```js
-import markdown from 'simple-mind-map/src/parse/markdown.js'
+import markdown from 'simple-mind/src/parse/markdown.js'
 ```
 
 If you are using the file in the format of `umd`, you can obtain it in the following way:
 
 ```html
-<script src="simple-mind-map/dist/simpleMindMap.umd.min.js"></script>
+<script src="simple-mind/dist/simpleMindMap.umd.min.js"></script>
 ```
 
 ```js

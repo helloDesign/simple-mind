@@ -7,8 +7,8 @@ This plugin provides the function of dragging and adjusting the size of images w
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import NodeImgAdjust from 'simple-mind-map/src/plugins/NodeImgAdjust.js'
+import MindMap from 'simple-mind'
+import NodeImgAdjust from 'simple-mind/src/plugins/NodeImgAdjust.js'
 
 MindMap.usePlugin(NodeImgAdjust)
 ```

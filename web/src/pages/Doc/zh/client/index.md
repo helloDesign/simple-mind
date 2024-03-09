@@ -37,13 +37,13 @@ git checkout electron
 在项目根目录下执行：
 
 ```bash
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 npm run electron:serve
 ```
 

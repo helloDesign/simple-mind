@@ -56,7 +56,7 @@ import {
   simpleDeepClone,
   htmlEscape,
   handleInputPasteText
-} from 'simple-mind-map/src/utils'
+} from 'simple-mind/src/utils'
 import { storeData } from '@/api'
 
 // 大纲侧边栏

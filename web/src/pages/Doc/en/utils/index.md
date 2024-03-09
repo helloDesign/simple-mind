@@ -5,7 +5,7 @@
 Reference:
 
 ```js
-import {walk, ...} from 'simple-mind-map/src/utils'
+import {walk, ...} from 'simple-mind/src/utils'
 ```
 
 ### Methods
@@ -484,7 +484,7 @@ Remove the node of the specified selector from the specified HTML string, and th
 Import:
 
 ```js
-import drawBackgroundImageToCanvas from 'simple-mind-map/src/utils/simulateCSSBackgroundInCanvas'
+import drawBackgroundImageToCanvas from 'simple-mind/src/utils/simulateCSSBackgroundInCanvas'
 ```
 
 Usage：
@@ -516,7 +516,7 @@ drawBackgroundImageToCanvas(ctx, width, height, img, {
 Import:
 
 ```js
-import Lru from 'simple-mind-map/src/utils/Lru.js'
+import Lru from 'simple-mind/src/utils/Lru.js'
 ```
 
 ### Constructor

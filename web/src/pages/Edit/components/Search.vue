@@ -35,7 +35,7 @@
       :placeholder="$t('search.replacePlaceholder')"
       size="small"
       v-model="replaceText"
-      style="margin: 12px 0;"
+      style="margin: 12px 0"
       @keydown.native.stop
     >
       <i slot="prefix" class="el-input__icon el-icon-edit"></i>
@@ -56,7 +56,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { isUndef } from 'simple-mind-map/src/utils/index'
+import { isUndef } from 'simple-mind/src/utils/index'
 
 // 搜索替换
 export default {

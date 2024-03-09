@@ -37,13 +37,13 @@ git checkout electron
 Execute in the project root directory:
 
 ```bash
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 npm run electron:serve
 ```
 

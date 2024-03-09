@@ -27,7 +27,7 @@
 <script>
 import Editor from '@toast-ui/editor'
 import '@toast-ui/editor/dist/toastui-editor.css' // Editor's Style
-import { isMobile } from 'simple-mind-map/src/utils/index'
+import { isMobile } from 'simple-mind/src/utils/index'
 
 /**
  * @Author: 王林

@@ -33,7 +33,7 @@ Price:
 1.Referencing packaged files:
 
 ```js
-import MindMap from 'simple-mind-map'
+import MindMap from 'simple-mind'
 import HandDrawnLikeStyle from 'handDrawnLikeStyle.cjs.min.js'
 // or import HandDrawnLikeStyle from 'handDrawnLikeStyle.esm.min.js'
 
@@ -51,14 +51,14 @@ npm link
 Then enter your project root directory to execute:
 
 ```bash
-npm link simple-mind-map-plugin-handdrawnlikestyle
+npm link simple-mind-plugin-handdrawnlikestyle
 ```
 
 Then you can directly import it for use:
 
 ```js
-import MindMap from 'simple-mind-map'
-import HandDrawnLikeStyle from 'simple-mind-map-plugin-handdrawnlikestyle'
+import MindMap from 'simple-mind'
+import HandDrawnLikeStyle from 'simple-mind-plugin-handdrawnlikestyle'
 
 MindMap.usePlugin(HandDrawnLikeStyle)
 ```

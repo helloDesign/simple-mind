@@ -1,11 +1,11 @@
 <h1 align="center">Simple mind map</h1>
 
-[![npm-version](https://img.shields.io/npm/v/simple-mind-map)](https://www.npmjs.com/package/simple-mind-map)
-![npm download](https://img.shields.io/npm/dm/simple-mind-map)
-[![GitHub issues](https://img.shields.io/github/issues/wanglin2/mind-map)](https://github.com/wanglin2/mind-map/issues)
+[![npm-version](https://img.shields.io/npm/v/simple-mind)](https://www.npmjs.com/package/simple-mind)
+![npm download](https://img.shields.io/npm/dm/simple-mind)
+[![GitHub issues](https://img.shields.io/github/issues/helloDesign/simple-mind)](https://github.com/helloDesign/simple-mind/issues)
 ![license](https://img.shields.io/npm/l/express.svg)
-[![GitHub stars](https://img.shields.io/github/stars/wanglin2/mind-map)](https://github.com/wanglin2/mind-map/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/wanglin2/mind-map)](https://github.com/wanglin2/mind-map/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/helloDesign/simple-mind)](https://github.com/helloDesign/simple-mind/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/helloDesign/simple-mind)](https://github.com/helloDesign/simple-mind/network/members)
 
 > 中文名：思绪思维导图。一个简单&强大的 Web 思维导图。
 
@@ -13,17 +13,16 @@
 
 1.一个 js 思维导图库，不依赖任何框架，你可以使用它来快速完成 Web 思维导图产品的开发。
 
-开发文档：[https://wanglin2.github.io/mind-map/#/doc/zh/](https://wanglin2.github.io/mind-map/#/doc/zh/)。
+开发文档：[https://hellodesign.github.io/mind-map/#/doc/zh/](https://wanglin2.github.io/mind-map/#/doc/zh/)。
 
 2.一个 Web 思维导图，基于思维导图库、Vue2.x、ElementUI 开发，可以操作电脑本地文件，所以你可以直接把它当做一个在线版思维导图应用使用，如果觉得 github 的响应速度慢，你也可以部署到你的服务器上。
 
-在线地址：[https://wanglin2.github.io/mind-map/](https://wanglin2.github.io/mind-map/)。
+在线地址：[https://hellodesign.github.io/mind-map/](https://hellodesign.github.io/mind-map/)。
 
 另外也提供了客户端可供下载使用，支持`Windows`、`Mac`及`Linux`，下载地址：
 
-Github：[releases](https://github.com/wanglin2/mind-map/releases)。
+Github：[releases](https://github.com/helloDesign/simple-mind/releases)。
 
-百度云盘：[地址](https://pan.baidu.com/s/1huasEbKsGNH2Af68dvWiOg?pwd=3bp3)。
 
 > 客户端版本会落后于在线版本，尝试最新功能请优先使用在线版。
 
@@ -44,7 +43,7 @@ Github：[releases](https://github.com/wanglin2/mind-map/releases)。
 # 安装
 
 ```bash
-npm i simple-mind-map
+npm i simple-mind
 ```
 
 # 使用
@@ -67,7 +66,7 @@ npm i simple-mind-map
 然后创建一个实例：
 
 ```js
-import MindMap from "simple-mind-map";
+import MindMap from "simple-mind";
 
 const mindMap = new MindMap({
   el: document.getElementById("mindMapContainer"),
@@ -82,36 +81,13 @@ const mindMap = new MindMap({
 
 即可得到一个思维导图。
 
-想要实现更多功能？可以查看[开发文档](https://wanglin2.github.io/mind-map/#/doc/zh/)。
+想要实现更多功能？可以查看[开发文档](https://hellodesign.github.io/mind-map/#/doc/zh/)。
 
 # License
 
 [MIT](./LICENSE)
 
 保留`mind-map`版权声明的情况下可随意商用。
-
-# 微信交流群
-
-群聊人数较多，无法通过二维码入群，可以微信添加`wanglinguanfang`拉你入群。
-
-# star
-
-如果喜欢本项目，欢迎点个star，这对我们很重要。
-
-[![Star History Chart](https://api.star-history.com/svg?repos=wanglin2/mind-map&type=Date)](https://star-history.com/#wanglin2/mind-map&Date)
-
-# 请作者喝杯咖啡
-
-开源不易，如果本项目有帮助到你的话，可以考虑请作者喝杯咖啡~
-
-> 厚椰乳一盒 + 纯牛奶半盒 + 冰块 + 咖啡液 = 生椰拿铁 yyds
-
-> 推荐使用支付宝，微信获取不到头像。转账请备注【思维导图】。
-
-<p>
-  <img src="./web/src/assets/img/alipay.jpg" style="width: 300px" />
-  <img src="./web/src/assets/img/wechat.jpg" style="width: 300px" />
-</p>
 
 <p>
     <span>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import exampleData from 'simple-mind-map/example/exampleData'
+import exampleData from 'simple-mind/example/exampleData'
 import { storeLocalConfig } from '@/api'
 
 Vue.use(Vuex)
@@ -21,7 +21,7 @@ const store = new Vuex.Store({
       // 是否开启手绘风格
       isUseHandDrawnLikeStyle: false,
       // 是否是暗黑模式
-      isDark: false, 
+      isDark: false,
     },
     activeSidebar: '', // 当前显示的侧边栏
     isOutlineEdit: false, // 是否是大纲编辑模式

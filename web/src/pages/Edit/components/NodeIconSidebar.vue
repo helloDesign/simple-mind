@@ -57,8 +57,8 @@
 <script>
 import Sidebar from './Sidebar'
 import { mapState } from 'vuex'
-import { nodeIconList } from 'simple-mind-map/src/svg/icons'
-import { mergerIconList } from 'simple-mind-map/src/utils/index'
+import { nodeIconList } from 'simple-mind/src/svg/icons'
+import { mergerIconList } from 'simple-mind/src/utils/index'
 import icon from '@/config/icon'
 import image from '@/config/image'
 

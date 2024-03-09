@@ -6,7 +6,7 @@
 
 目前支持导出为`.smm`、`.json`、`.svg`、`.png`、`.pdf`、`.md`、`.xmind`文件。
 
-`.smm`是`simple-mind-map`自己定义的一种文件，其实就是`json`文件，换了一个扩展名而已。
+`.smm`是`simple-mind`自己定义的一种文件，其实就是`json`文件，换了一个扩展名而已。
 
 导出直接调用`export`方法即可：
 
@@ -136,7 +136,7 @@ mindMap.view.reset()
 要导入`xmind`文件，需要引入`xmind`的解析方法：
 
 ```js
-import xmind from 'simple-mind-map/src/parse/xmind.js'
+import xmind from 'simple-mind/src/parse/xmind.js'
 ```
 
 如果使用的是`umd`文件，可以这样获取：
@@ -246,7 +246,7 @@ mindMap.setData(data)
 要导入`markdown`文件需要引入相应的解析方法：
 
 ```js
-import markdown from 'simple-mind-map/src/parse/markdown.js'
+import markdown from 'simple-mind/src/parse/markdown.js'
 ```
 
 如果使用的是umd格式的文件，那么可以通过如下方式获取：

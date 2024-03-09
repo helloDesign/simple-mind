@@ -5,9 +5,9 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import Export from 'simple-mind-map/src/plugins/Export.js'
-// import Export from 'simple-mind-map/src/Export.js' v0.6.0以下版本使用该路径
+import MindMap from 'simple-mind'
+import Export from 'simple-mind/src/plugins/Export.js'
+// import Export from 'simple-mind/src/Export.js' v0.6.0以下版本使用该路径
 
 MindMap.usePlugin(Export)
 ```
@@ -97,7 +97,7 @@ svg(
 > 内部导出pdf使用的是pdf-lib库将图片转为pdf，目前当节点数量比较大时导出pdf可能会丢失部分内容，所以建议有能力的开发者自行实现pdf的导出功能，如果项目中有后端开发，也可以寻求后端开发人员的支持。
 
 ```js
-import ExportPDF from 'simple-mind-map/src/plugins/ExportPDF.js'
+import ExportPDF from 'simple-mind/src/plugins/ExportPDF.js'
 MindMap.usePlugin(ExportPDF)
 ```
 
@@ -111,7 +111,7 @@ MindMap.usePlugin(ExportPDF)
 
 ### smm(name, withConfig)
 
-`simple-mind-map`自定义的文件格式，其实就是`json`，和`json`方法返回的数据一模一样。
+`simple-mind`自定义的文件格式，其实就是`json`，和`json`方法返回的数据一模一样。
 
 ### md()
 
@@ -135,7 +135,7 @@ MindMap.usePlugin(ExportPDF)
 > v0.6.6+，需要额外注册一个ExportXMind插件
 
 ```js
-import ExportXMind from 'simple-mind-map/src/plugins/ExportXMind.js'
+import ExportXMind from 'simple-mind/src/plugins/ExportXMind.js'
 MindMap.usePlugin(ExportXMind)
 ```
 

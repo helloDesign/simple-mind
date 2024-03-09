@@ -12,7 +12,7 @@
         />
         <el-button
           size="small"
-          style="width: 100%; margin-top: 20px;"
+          style="width: 100%; margin-top: 20px"
           @click="confirm"
           >{{ $t('formulaSidebar.confirm') }}</el-button
         >
@@ -34,7 +34,7 @@
 import Sidebar from './Sidebar'
 import { mapState, mapMutations } from 'vuex'
 import { formulaList } from '@/config/constant'
-import 'simple-mind-map/node_modules/katex/dist/katex.min.css'
+import 'simple-mind/node_modules/katex/dist/katex.min.css'
 
 export default {
   name: 'FormulaSidebar',
@@ -54,8 +54,8 @@ export default {
   },
   computed: {
     ...mapState({
-      activeSidebar: state => state.activeSidebar, 
-      isDark: state => state.localConfig.isDark, 
+      activeSidebar: state => state.activeSidebar,
+      isDark: state => state.localConfig.isDark,
       localConfig: state => state.localConfig
     })
   },

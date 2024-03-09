@@ -49,7 +49,7 @@ mindMap.removePlugin(YourPlugin)
 你也可以继承内部的一些插件：
 
 ```js
-import ScrollbarPlugin from 'simple-mind-map/src/plugins/Scrollbar.js'
+import ScrollbarPlugin from 'simple-mind/src/plugins/Scrollbar.js'
 
 class YourPlugin extends ScrollbarPlugin {
     constructor(opt) {

@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import xmind from 'simple-mind-map/src/parse/xmind.js'
-import markdown from 'simple-mind-map/src/parse/markdown.js'
+import xmind from 'simple-mind/src/parse/xmind.js'
+import markdown from 'simple-mind/src/parse/markdown.js'
 import { fileToBuffer } from '@/utils'
 import { read, utils } from 'xlsx'
 import { mapMutations } from 'vuex'

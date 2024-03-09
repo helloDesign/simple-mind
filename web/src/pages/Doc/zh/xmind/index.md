@@ -7,13 +7,13 @@
 ## 引入
 
 ```js
-import xmind from 'simple-mind-map/src/parse/xmind.js'
+import xmind from 'simple-mind/src/parse/xmind.js'
 ```
 
 如果使用的是`umd`格式的文件，那么可以通过如下方式获取：
 
 ```html
-<script src="simple-mind-map/dist/simpleMindMap.umd.min.js"></script>
+<script src="simple-mind/dist/simpleMindMap.umd.min.js"></script>
 ```
 
 ```js
@@ -48,8 +48,8 @@ simpleMindMap.xmind
 
 > v0.6.6+
 
-- `data`：`simple-mind-map`思维导图数据，可以通过`mindMap.getData()`方法获取。
+- `data`：`simple-mind`思维导图数据，可以通过`mindMap.getData()`方法获取。
 
 - `name`：要导出的文件名。
 
-将`simple-mind-map`数据转为`xmind`文件。该方法为异步方法，返回一个`Promise`实例，返回的数据是一个`blob`类型的`zip`压缩包数据，你可以自行下载为文件。
+将`simple-mind`数据转为`xmind`文件。该方法为异步方法，返回一个`Promise`实例，返回的数据是一个`blob`类型的`zip`压缩包数据，你可以自行下载为文件。

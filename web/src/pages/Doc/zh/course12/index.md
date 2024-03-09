@@ -45,7 +45,7 @@ mindMap.execCommand('INSERT_CHILD_NODE', false)
 实现监听`data_change`事件来刷新树数据：
 
 ```js
-import { nodeRichTextToTextWithWrap } from 'simple-mind-map/src/utils'
+import { nodeRichTextToTextWithWrap } from 'simple-mind/src/utils'
 
 this.mindMap.on('data_change', () => {
     this.refresh()
@@ -140,7 +140,7 @@ onClick(data) {
 我们通过自定义树节点内容渲染了一个`contenteditable=true`的标签用于输入文本，然后在`blur`事件中修改节点文本：
 
 ```js
-import { textToNodeRichTextWithWrap } from 'simple-mind-map/src/utils'
+import { textToNodeRichTextWithWrap } from 'simple-mind/src/utils'
 
 // 失去焦点更新节点文本
 onBlur(e, node) {
@@ -242,7 +242,7 @@ onKeyDown(e) {
 通过监听节点内容编辑框的`keydown`事件来完成添加新节点的操作：
 
 ```js
-import { createUid } from 'simple-mind-map/src/utils'
+import { createUid } from 'simple-mind/src/utils'
 
 // 节点输入区域按键事件
 onNodeInputKeydown(e) {
@@ -278,7 +278,7 @@ insertChildNode() {
 为什么要拦截输入框的粘贴操作，因为用户可能粘贴的是富文本内容，也就是带html标签的，但是一般我们都不希望用户粘贴这种内容，只允许粘贴纯文本，所以我们要拦截粘贴事件，处理一下用户粘贴的内容：
 
 ```js
-import { getTextFromHtml } from 'simple-mind-map/src/utils'
+import { getTextFromHtml } from 'simple-mind/src/utils'
 
 // 拦截粘贴事件
 onPaste(e) {

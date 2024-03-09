@@ -21,13 +21,13 @@ If you want to try it through demo, you can do the following steps:
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 ```
 
 2. Modify `web/src/pages/Edit/components/Edit.vue` file
@@ -56,7 +56,7 @@ npm run serve
 4. Start signaling server:
 
 ```bash
-// Execute under simple-mind-map path
+// Execute under simple-mind path
 npm run wsServe
 ```
 
@@ -73,8 +73,8 @@ You can set different userNames on different browsers. Then you can edit in one 
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Cooperate from 'simple-mind-map/src/plugins/Cooperate.js'
+import MindMap from 'simple-mind'
+import Cooperate from 'simple-mind/src/plugins/Cooperate.js'
 MindMap.usePlugin(Cooperate)
 ```
 
@@ -106,7 +106,7 @@ Set the connection provider for Yjs. If 'provider' is not transmitted, 'y webrtc
 
 If the default 'y webrtc' is used, the necessary configuration needs to be passed in through the second parameter.
 
-`simple-mind-map/bin/wsServer.mjs` file provides a simple signaling server code for testing and reference.
+`simple-mind/bin/wsServer.mjs` file provides a simple signaling server code for testing and reference.
 
 ### setUserInfo(userInfo)
 

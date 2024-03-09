@@ -4,21 +4,19 @@
       <div class="infoBox">
         <div class="infoTitle">JavaScript库</div>
         <div class="info">
-          simple-mind-map是一个简单&强大的Web思维导图库，不依赖任何特定框架，可以帮助你快速开发思维导图产品。
+          simple-mind是一个简单&强大的Web思维导图库，不依赖任何特定框架，可以帮助你快速开发思维导图产品。
         </div>
-        <div class="info">
-          使用非常简单，只需三步即可渲染出一个思维导图：
-        </div>
+        <div class="info">使用非常简单，只需三步即可渲染出一个思维导图：</div>
         <div class="info">第一步：安装</div>
         <div class="codeBox">
           <pre><code class="language-bash" ref="code1">
-npm i simple-mind-map
+npm i simple-mind
             </code></pre>
         </div>
         <div class="info">第二步：引入</div>
         <div class="codeBox">
           <pre><code class="language-javascript" ref="code2">
-import MindMap from "simple-mind-map"
+import MindMap from "simple-mind"
             </code></pre>
         </div>
         <div class="info">第三步：实例化</div>

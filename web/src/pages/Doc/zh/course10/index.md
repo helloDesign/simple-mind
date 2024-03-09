@@ -2,7 +2,7 @@
 
 ## 主题配置属性一览
 
-此处的配置可能未及时更新，完整的主题配置可以参考：[default.js](https://github.com/wanglin2/mind-map/blob/main/simple-mind-map/src/themes/default.js)。
+此处的配置可能未及时更新，完整的主题配置可以参考：[default.js](https://github.com/wanglin2/mind-map/blob/main/simple-mind/src/themes/default.js)。
 
 如果某个属性的值你不知道如何传，可以去在线demo中设置一下，然后导出json或smm文件查看对应的值。也可以参考demo项目中的配置[zh.js](https://github.com/wanglin2/mind-map/blob/main/web/src/config/zh.js)。
 
@@ -162,16 +162,16 @@
 
 ## 使用和切换主题
 
-`simple-mind-map`内置了很多主题，可以通过如下方式获取到所有的内置主题列表：
+`simple-mind`内置了很多主题，可以通过如下方式获取到所有的内置主题列表：
 
 ```js
-import { themeList } from 'simple-mind-map/src/constants/constant'
-// import { themeList } from 'simple-mind-map/src/utils/constant' v0.6.0以下版本使用该路径
+import { themeList } from 'simple-mind/src/constants/constant'
+// import { themeList } from 'simple-mind/src/utils/constant' v0.6.0以下版本使用该路径
 ```
 
 > v0.6.8+，主题列表增加了代表是否是暗黑主题的字段dark，你可以根据这个字段来将界面切换为暗黑模式。
 
-可以在实例化`simple-mind-map`时指定使用的主题：
+可以在实例化`simple-mind`时指定使用的主题：
 
 ```js
 new MindMap({
@@ -221,7 +221,7 @@ mindMap.setThemeConfig({
 除了可以使用内置的主题外，你也可以自定义新主题：
 
 ```js
-import MindMap from 'simple-mind-map'
+import MindMap from 'simple-mind'
 
 // 注册新主题
 MindMap.defineTheme('主题名称', {
@@ -239,7 +239,7 @@ mindMap.setTheme('主题名称')
 
 最好在实例化之前进行注册，这样在实例化时可以直接使用新注册的主题。
 
-一个主题其实就是一个普通的对象，完整配置可以参考[默认主题](https://github.com/wanglin2/mind-map/blob/main/simple-mind-map/src/themes/default.js)，`defineTheme`方法会把你传入的配置和默认配置做合并。大部分主题其实需要自定义的部分不是很多，一个典型的自定义主题配置可以参考[blueSky](https://github.com/wanglin2/mind-map/blob/main/simple-mind-map/src/themes/blueSky.js)。
+一个主题其实就是一个普通的对象，完整配置可以参考[默认主题](https://github.com/wanglin2/mind-map/blob/main/simple-mind/src/themes/default.js)，`defineTheme`方法会把你传入的配置和默认配置做合并。大部分主题其实需要自定义的部分不是很多，一个典型的自定义主题配置可以参考[blueSky](https://github.com/wanglin2/mind-map/blob/main/simple-mind/src/themes/blueSky.js)。
 
 ```js
 MindMap.defineTheme('redSpirit', {

@@ -5,9 +5,9 @@ The `Export` plugin provides the export function.
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Export from 'simple-mind-map/src/plugins/Export.js'
-// import Export from 'simple-mind-map/src/Export.js' Use this path for versions below v0.6.0
+import MindMap from 'simple-mind'
+import Export from 'simple-mind/src/plugins/Export.js'
+// import Export from 'simple-mind/src/Export.js' Use this path for versions below v0.6.0
 
 MindMap.usePlugin(Export)
 ```
@@ -97,7 +97,7 @@ Export as `pdf`. Unlike other export methods, this method does not return data a
 > The internal export of PDF uses the PDF lib library to convert images into PDF. Currently, when exporting PDF with a large number of nodes, some content may be lost. Therefore, it is recommended that capable developers implement the PDF export function themselves. If there are backend developers in the project, they can also seek support from backend developers.
 
 ```js
-import ExportPDF from 'simple-mind-map/src/plugins/ExportPDF.js'
+import ExportPDF from 'simple-mind/src/plugins/ExportPDF.js'
 MindMap.usePlugin(ExportPDF)
 ```
 
@@ -131,7 +131,7 @@ Gets `svg` data, an async method that returns an object:
 > v0.6.6+, an additional ExportXMind plugin needs to be registered
 
 ```js
-import ExportXMind from 'simple-mind-map/src/plugins/ExportXMind.js'
+import ExportXMind from 'simple-mind/src/plugins/ExportXMind.js'
 MindMap.usePlugin(ExportXMind)
 ```
 

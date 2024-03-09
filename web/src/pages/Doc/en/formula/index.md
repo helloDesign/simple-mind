@@ -18,18 +18,18 @@ This plugin is used to support inserting formulas into nodes.
 
 > This formula may not render successfully on a few browsers. If you need to be compatible with these browsers, you can consider changing the configuration to 'HTML'. For detailed documentation, please refer to [Options](https://katex.org/docs/options). Using this configuration may require the introduction of a 'KaTeX' style file, which you can test on your own.
 
-> v0.9.3+will internally determine whether the current Chrome kernel version of the browser is lower than 100, If so, it will automatically convert 'output' from 'mathml' to 'html', At this point, the style file for 'KaTeX' needs to be imported, but it is not imported within the library, so you need to manually import it in the project. If you introduced 'simple-mind-map' through the 'npm' method, you can introduce it as follows:
+> v0.9.3+will internally determine whether the current Chrome kernel version of the browser is lower than 100, If so, it will automatically convert 'output' from 'mathml' to 'html', At this point, the style file for 'KaTeX' needs to be imported, but it is not imported within the library, so you need to manually import it in the project. If you introduced 'simple-mind' through the 'npm' method, you can introduce it as follows:
 >
 > ```js
-> import 'simple-mind-map/node_modules/katex/dist/katex.min.css'
+> import 'simple-mind/node_modules/katex/dist/katex.min.css'
 > ```
 > If you are using packaged files such as '.umd.js' or '.esm.js', you can import them through online CDN services, such as `https://unpkg.com/browse/katex@0.16.9/dist/`, Of course, it is best to upload the 'css' file of the 'katex' and the corresponding font files in the 'fonts' directory to your own server.
 
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import Formula from 'simple-mind-map/src/plugins/Formula.js'
+import MindMap from 'simple-mind'
+import Formula from 'simple-mind/src/plugins/Formula.js'
 
 MindMap.usePlugin(Formula)
 ```

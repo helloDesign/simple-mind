@@ -7,8 +7,8 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import Search from 'simple-mind-map/src/plugins/Search.js'
+import MindMap from 'simple-mind'
+import Search from 'simple-mind/src/plugins/Search.js'
 MindMap.usePlugin(Search)
 ```
 

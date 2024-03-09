@@ -3,7 +3,7 @@
 ## 安装
 
 ```bash
-npm i simple-mind-map
+npm i simple-mind
 ```
 
 `0.2.0`版本之前的注意事项：
@@ -12,7 +12,7 @@ npm i simple-mind-map
 > 
 > ```js
 > module.exports = {
->      transpileDependencies: ['simple-mind-map']
+>      transpileDependencies: ['simple-mind']
 > }
 > ```
 > 
@@ -41,10 +41,10 @@ npm i simple-mind-map
 }
 ```
 
-然后引入`simple-mind-map`库，创建一个实例：
+然后引入`simple-mind`库，创建一个实例：
 
 ```js
-import MindMap from "simple-mind-map";
+import MindMap from "simple-mind";
 
 const mindMap = new MindMap({
   el: document.getElementById('mindMapContainer'),
@@ -59,21 +59,21 @@ const mindMap = new MindMap({
 
 这样即可得一个思维导图。
 
-如果你想要实现一个完整思维导图，那么通常你需要开发一些ui界面，通过`simple-mind-map`库提供的接口来实现更多功能。
+如果你想要实现一个完整思维导图，那么通常你需要开发一些ui界面，通过`simple-mind`库提供的接口来实现更多功能。
 
-`simple-mind-map`支持丰富的配置、事件、命令，以及一些额外的插件扩展，阅读后续的文档来了解更多吧。
+`simple-mind`支持丰富的配置、事件、命令，以及一些额外的插件扩展，阅读后续的文档来了解更多吧。
 
-默认引入的是未打包的`ES`模块，且只包含核心功能，不包含未注册的插件内容，能有效减小体积，不过你需要在你的项目中配置`babel`编译`simple-mind-map`，防止一些较新的`js`语法部分浏览器不支持。
+默认引入的是未打包的`ES`模块，且只包含核心功能，不包含未注册的插件内容，能有效减小体积，不过你需要在你的项目中配置`babel`编译`simple-mind`，防止一些较新的`js`语法部分浏览器不支持。
 
 如果你不想一开始就加载所有插件，想在实例化了之后再异步加载和注册插件，可以这么做：
 
 ```js
-import('simple-mind-map/src/plugins/Export.js').then(res => {
+import('simple-mind/src/plugins/Export.js').then(res => {
   mindMap.addPlugin(res.default)
 })
 ```
 
-如果你需要`umd`模块格式的文件，比如以`CDN`的方式在浏览器上使用，那么你可以从`/simple-mind-map/dist/`目录中找到`simpleMindMap.umd.min.js`文件和`simpleMindMap.css`文件，复制到你的项目中，然后在页面中引入：
+如果你需要`umd`模块格式的文件，比如以`CDN`的方式在浏览器上使用，那么你可以从`/simple-mind/dist/`目录中找到`simpleMindMap.umd.min.js`文件和`simpleMindMap.css`文件，复制到你的项目中，然后在页面中引入：
 
 ```html
 <link rel="stylesheet" href="simpleMindMap.css">
@@ -84,12 +84,12 @@ import('simple-mind-map/src/plugins/Export.js').then(res => {
 
 这种方式的缺点是会包含所有的内容，包括你没有注册的插件，所以整体体积会比较大。
 
-（v0.5.4+）如果你想直接在浏览器端通过`ES`模块的方式来使用，你可以在`/simple-mind-map/dist/`目录中找到`simpleMindMap.esm.js`和`simpleMindMap.esm.css`文件。
+（v0.5.4+）如果你想直接在浏览器端通过`ES`模块的方式来使用，你可以在`/simple-mind/dist/`目录中找到`simpleMindMap.esm.js`和`simpleMindMap.esm.css`文件。
 
 也可以使用在线cdn服务，比如：
 
 ```
-https://unpkg.com/browse/simple-mind-map@0.9.2/dist/
+https://unpkg.com/browse/simple-mind@0.9.2/dist/
 ```
 
 可以找到某个版本的所有打包后的文件。
@@ -103,13 +103,13 @@ https://unpkg.com/browse/simple-mind-map@0.9.2/dist/
 ```bash
 git clone https://github.com/wanglin2/mind-map.git
 cd mind-map
-cd simple-mind-map
+cd simple-mind
 npm i
 npm link
 cd ..
 cd web
 npm i
-npm link simple-mind-map
+npm link simple-mind
 npm run serve
 ```
 
@@ -117,16 +117,16 @@ npm run serve
 
 ### 打包库
 
-自`0.2.0`版本开始增加了对核心库`simple-mind-map`的打包，复用了示例项目`web`的打包工具。
+自`0.2.0`版本开始增加了对核心库`simple-mind`的打包，复用了示例项目`web`的打包工具。
 
 ```bash
 cd web
 npm run buildLibrary
 ```
 
-打包入口为`simple-mind-map/full.js`，默认会引入所有插件，如果你不需要所有插件的话，那么可以修改该文件，只引入你需要的插件，这样可以减少打包后的文件体积。
+打包入口为`simple-mind/full.js`，默认会引入所有插件，如果你不需要所有插件的话，那么可以修改该文件，只引入你需要的插件，这样可以减少打包后的文件体积。
 
-`simple-mind-map`库的`package.json`文件提供了两个导出字段：
+`simple-mind`库的`package.json`文件提供了两个导出字段：
 
 ```json
 {
@@ -140,11 +140,11 @@ npm run buildLibrary
 #### 生成TypeScript类型文件
 
 ```bash
-cd simple-mind-map
+cd simple-mind
 npm run types
 ```
 
-即可得到`simple-mind-map/types/`目录下的类型文件。
+即可得到`simple-mind/types/`目录下的类型文件。
 
 ### 编译文档
 
@@ -169,10 +169,10 @@ npm run build
 解决方法：使用如下引入方式：
 
 ```js
-import MindMap from "simple-mind-map/dist/simpleMindMap.umd.min"
+import MindMap from "simple-mind/dist/simpleMindMap.umd.min"
 ```
 
-`simple-mind-map`包提供未打包的入口字段`module`，依赖的`xml-js`包需要引入`node`环境下的包，所以在`Vite`中获取不到会报错，所以指定引入打包后的入口，相关包都已打包进产物，所以不会报错。
+`simple-mind`包提供未打包的入口字段`module`，依赖的`xml-js`包需要引入`node`环境下的包，所以在`Vite`中获取不到会报错，所以指定引入打包后的入口，相关包都已打包进产物，所以不会报错。
 
 如果需要二次开发，也就是必须要使用未打包代码的话，如果你不需要解析`xmind`文件的话，可以去除`xmind`模块，如果需要的话那么可以尝试换成其他的解析`xml`为`json`的库。
 

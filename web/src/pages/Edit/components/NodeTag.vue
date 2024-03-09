@@ -40,10 +40,7 @@
 </template>
 
 <script>
-import {
-  generateColorByContent,
-  isMobile
-} from 'simple-mind-map/src/utils/index'
+import { generateColorByContent, isMobile } from 'simple-mind/src/utils/index'
 
 /**
  * @Author: 王林

@@ -2,14 +2,14 @@
 
 ## 插入图标
 
-`simple-mind-map`内置了一些图标：
+`simple-mind`内置了一些图标：
 
 <img src="../../../../assets/img/docs/iconList.jpg" />
 
 你可以通过如下方式获取：
 
 ```js
-import { nodeIconList } from 'simple-mind-map/src/svg/icons'
+import { nodeIconList } from 'simple-mind/src/svg/icons'
 ```
 
 如果你使用的是`umd`格式的文件，可以通过如下方式获取（v0.5.8+）：
@@ -47,7 +47,7 @@ simpleMindMap.iconList
 
 > v0.5.8+
 
-除了使用内置的图标外，你也可以扩展图标，实例化`simple-mind-map`时传入你要扩展的图标列表即可：
+除了使用内置的图标外，你也可以扩展图标，实例化`simple-mind`时传入你要扩展的图标列表即可：
 
 ```js
 new MindMap({

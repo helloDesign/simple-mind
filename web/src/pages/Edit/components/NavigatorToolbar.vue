@@ -104,7 +104,7 @@ import { langList } from '@/config'
 import i18n from '@/i18n'
 import { storeLang, getLang } from '@/api'
 import { mapState, mapMutations } from 'vuex'
-import pkg from 'simple-mind-map/package.json'
+import pkg from 'simple-mind/package.json'
 
 /**
  * @Author: 王林

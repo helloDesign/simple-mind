@@ -1,8 +1,11 @@
 <template>
   <div>
     <h1>快捷键</h1>
-<p><code>simple-mind-map</code>常用操作都支持快捷键方式使用，目前所有的快捷键列表如下：</p>
-<pre class="hljs"><code>[
+    <p>
+      <code>simple-mind</code
+      >常用操作都支持快捷键方式使用，目前所有的快捷键列表如下：
+    </p>
+    <pre class="hljs"><code>[
   {
     <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;节点操作&#x27;</span>,
     <span class="hljs-attr">list</span>: [
@@ -111,36 +114,43 @@
   }
 ]
 </code></pre>
-<p>默认当鼠标滑入画布范围内才会响应快捷键操作，如果你想去掉这个限制可以在实例化<code>simple-mind-map</code>时通过选项指定：</p>
-<pre class="hljs"><code><span class="hljs-keyword">new</span> MindMap({
+    <p>
+      默认当鼠标滑入画布范围内才会响应快捷键操作，如果你想去掉这个限制可以在实例化<code>simple-mind</code>时通过选项指定：
+    </p>
+    <pre class="hljs"><code><span class="hljs-keyword">new</span> MindMap({
     <span class="hljs-comment">// ...</span>
     <span class="hljs-attr">enableShortcutOnlyWhenMouseInSvg</span>: <span class="hljs-literal">false</span>
 })
 </code></pre>
-<p>你也可以添加新的快捷键：</p>
-<pre class="hljs"><code>mindMap.keyCommand.addShortcut(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+    <p>你也可以添加新的快捷键：</p>
+    <pre
+      class="hljs"
+    ><code>mindMap.keyCommand.addShortcut(<span class="hljs-string">&#x27;key&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
     <span class="hljs-comment">// 执行一些操作</span>
 })
 </code></pre>
-<p><code>key</code>支持三种方式：</p>
-<pre class="hljs"><code>Enter           // 单个按键
+    <p><code>key</code>支持三种方式：</p>
+    <pre class="hljs"><code>Enter           // 单个按键
 Tab | Insert    // 或
 Shift + a       // 与
 </code></pre>
-<p>要获取所有的按键值对应的名称，可以：</p>
-<pre class="hljs"><code><span class="hljs-keyword">import</span> { keyMap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind-map/src/utils/keyMap&#x27;</span>
+    <p>要获取所有的按键值对应的名称，可以：</p>
+    <pre
+      class="hljs"
+    ><code><span class="hljs-keyword">import</span> { keyMap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;simple-mind/src/utils/keyMap&#x27;</span>
 </code></pre>
-<p>可以添加当然也可以移除，详细文档可以参考<a href="https://wanglin2.github.io/mind-map/#/doc/zh/keyCommand">keyCommand</a>。</p>
-
+    <p>
+      可以添加当然也可以移除，详细文档可以参考<a
+        href="https://wanglin2.github.io/mind-map/#/doc/zh/keyCommand"
+        >keyCommand</a
+      >。
+    </p>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
-
 </style>

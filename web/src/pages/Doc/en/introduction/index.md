@@ -1,6 +1,6 @@
 # Introduction
 
-`simple-mind-map` 【Chinese name: 思绪 mind map】 is a simple and powerful web mind map library, not dependent on any specific framework. Can help you quickly develop mind mapping products.
+`simple-mind` 【Chinese name: 思绪 mind map】 is a simple and powerful web mind map library, not dependent on any specific framework. Can help you quickly develop mind mapping products.
 
 > If you just want to use mind mapping, you can also use the demo of this project as a regular online mind mapping tool. Click on the 【Online Demo】 in the upper right corner to start using it.
 >
@@ -22,14 +22,14 @@
 
 ## Repository Catalog Introduction
 
-1.`simple-mind-map`
+1.`simple-mind`
 
 This is a mind map library that is framework-agnostic and can be used with
 frameworks such as Vue and React, or without a framework.
 
 2.`web`
 
-This is an online mind map built using the `simple-mind-map` library and based
+This is an online mind map built using the `simple-mind` library and based
 on `Vue2.x` and `ElementUI`. Features include:
 
 - [x] Toolbar, which supports inserting and deleting nodes, and editing node
@@ -101,7 +101,7 @@ There are many other online mind mapping products similar to Zhixi, such as [Git
 
 These open-source mind maps are also good, each with its own characteristics, but they also have certain drawbacks, such as stopping updates, average interface aesthetics, less functionality, relying on a certain framework, and so on.
 
-In summary, in open-source mind maps, it is difficult to find a better choice than `simple-mind-map`. Of course, `simple-mind-map` is far from being the best, and it also has many shortcomings, as you saw in the previous [special note]. However, `simple-mind-map` has always been in a fast iteration process, and we welcome you to join and improve it together.
+In summary, in open-source mind maps, it is difficult to find a better choice than `simple-mind`. Of course, `simple-mind` is far from being the best, and it also has many shortcomings, as you saw in the previous [special note]. However, `simple-mind` has always been in a fast iteration process, and we welcome you to join and improve it together.
 
 ## Browser Compatibility
 

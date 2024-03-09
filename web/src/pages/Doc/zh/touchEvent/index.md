@@ -9,8 +9,8 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import TouchEvent from 'simple-mind-map/src/plugins/TouchEvent.js'
+import MindMap from 'simple-mind'
+import TouchEvent from 'simple-mind/src/plugins/TouchEvent.js'
 
 MindMap.usePlugin(TouchEvent)
 ```

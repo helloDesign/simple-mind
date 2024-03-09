@@ -23,9 +23,9 @@ After version `0.6.16+`, third-party libraries such as 'dom-to-image-more' and '
 ## Register
 
 ```js
-import MindMap from 'simple-mind-map'
-import RichText from 'simple-mind-map/src/plugins/RichText.js'
-// import RichText from 'simple-mind-map/src/RichText.js' Use this path for versions below v0.6.0
+import MindMap from 'simple-mind'
+import RichText from 'simple-mind/src/plugins/RichText.js'
+// import RichText from 'simple-mind/src/RichText.js' Use this path for versions below v0.6.0
 
 MindMap.usePlugin(RichText, opt?)
 ```

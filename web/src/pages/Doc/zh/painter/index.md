@@ -7,8 +7,8 @@
 ## 注册
 
 ```js
-import MindMap from 'simple-mind-map'
-import Painter from 'simple-mind-map/src/plugins/Painter.js'
+import MindMap from 'simple-mind'
+import Painter from 'simple-mind/src/plugins/Painter.js'
 MindMap.usePlugin(Painter)
 ```
 
