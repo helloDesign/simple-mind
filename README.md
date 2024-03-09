@@ -13,7 +13,7 @@
 
 1.一个 js 思维导图库，不依赖任何框架，你可以使用它来快速完成 Web 思维导图产品的开发。
 
-开发文档：[https://hellodesign.github.io/mind-map/#/doc/zh/](https://wanglin2.github.io/mind-map/#/doc/zh/)。
+开发文档：[https://hellodesign.github.io/mind-map/#/doc/zh/](https://hellodesign.github.io/mind-map/#/doc/zh/)。
 
 2.一个 Web 思维导图，基于思维导图库、Vue2.x、ElementUI 开发，可以操作电脑本地文件，所以你可以直接把它当做一个在线版思维导图应用使用，如果觉得 github 的响应速度慢，你也可以部署到你的服务器上。
 
